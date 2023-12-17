@@ -16,4 +16,7 @@ jobs:
           echo "Hello ${{ 1 > 2 }}"
           echo "Hello ${{ 'true' == 'String' }}"
           echo "Hello ${{ true && false }}"
+      - name: Dump Contaxts
+        run: |
+          echo '${{ toJson(github) }}'
  
