@@ -16,11 +16,11 @@ jobs:
           echo "Hello ${{ 1 > 2 }}"
           echo "Hello ${{ 'true' == 'String' }}"
           echo "Hello ${{ true && false }}"
-          echo "Hello ${{ true || false }}"
       - name: Dump Contaxts
         run: |
           echo "Hello ${{ toJson(github) }}"
           echo "Hello ${{ toJson(steps) }}"
           echo "Hello ${{ toJson(job) }}"
           echo "Hello ${{ toJson(secrets) }}"
+          echo "Hello ${{ toJson(runner) }}"
  
