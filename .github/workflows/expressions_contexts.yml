@@ -19,4 +19,7 @@ jobs:
       - name: Dump Contaxts
         run: |
           echo '${{ toJson(github) }}'
- 
+          echo '${{ toJson(job) }}'
+          echo '${{ toJson(steps) }}'
+          echo '${{ toJson(secrets) }}'
+          echo '${{ toJson(runner) }}'
