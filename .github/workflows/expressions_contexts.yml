@@ -18,8 +18,8 @@ jobs:
           echo "Hello ${{ true && false }}"
       - name: Dump Contaxts
         run: |
-          echo '${{ toJson(github) }}'
-          echo '${{ toJson(job) }}'
-          echo '${{ toJson(steps) }}'
-          echo '${{ toJson(secrets) }}'
-          echo '${{ toJson(runner) }}'
+          echo 'Github Context${{ toJson(github) }}'
+          echo 'Jobs Context ${{ toJson(job) }}'
+          echo 'Steps Context ${{ toJson(steps) }}'
+          echo 'Secrets Context ${{ toJson(secrets) }}'
+          echo 'Runner Context${{ toJson(runner) }}'
