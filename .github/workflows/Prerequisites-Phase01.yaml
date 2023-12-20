@@ -1,6 +1,6 @@
 name: Prerequisites-Phase01
 on: 
-    workflow_dispatch:
+    push:
 
 
 jobs:
