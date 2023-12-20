@@ -1,5 +1,5 @@
 name: Environment Variables
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
     env-vars-and-context:
