@@ -4,16 +4,28 @@ on:
 
 
 jobs:
-  Run-Prerequisites-Phase01:
-    runs-on: windows-latest
-    steps:
+        
+    Run-Prerequisites-Phase01:
+        runs-on: windows-latest
+        steps:
         - name: Checkout
           uses: actions/checkout@v3
-        - name: Get Present Working Directory
-          run: echo "Present Working Directory is $PWD"
-        - name: Get List of Files
-          run: get-childitem -recurse 
         - name: Run Prerequisites-Phase01
           run: ./Tasks/Task001/Task001.ps1
-
-  
+    Run-Prerequisites-Phase02:
+        runs-on: windows-latest
+        needs: Run-Prerequisites-Phase01
+        steps:
+        # - name: Checkout
+        #   uses: actions/checkout@v3
+        - name: Run Prerequisites-Phase02
+          run: ./Tasks/Task002/Task002.ps1
+    Run-Prerequisites-Phase03:
+        runs-on: windows-latest
+        needs: [Run-Prerequisites-Phase01, Run-Prerequisites-Phase02]
+        steps:
+        # - name: Checkout
+        #   uses: actions/checkout@v3
+        - name: Run Prerequisites-Phase03
+          run: ./Tasks/Task003/Task003.ps1
+    
