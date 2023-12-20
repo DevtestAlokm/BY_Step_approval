@@ -9,6 +9,11 @@ jobs:
     steps:
         - name: Checkout
           uses: actions/checkout@v3
-        - name: Run Prerequisites-Phase01
-          run: .\Tasks\Task001.ps1
+        - name: Get Present Working Directory
+          run: echo "Present Working Directory is $PWD"
+        - name: Get List of Files
+          run: get-childitem -recurse 
+        # - name: Run Prerequisites-Phase01
+        #   run: .\Tasks\Task001.ps1
+
   
