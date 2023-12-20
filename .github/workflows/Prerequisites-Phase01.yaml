@@ -16,16 +16,16 @@ jobs:
         runs-on: windows-latest
         needs: Run-Prerequisites-Phase01
         steps:
-        # - name: Checkout
-        #   uses: actions/checkout@v3
+        - name: Checkout
+          uses: actions/checkout@v3
         - name: Run Prerequisites-Phase02
           run: ./Tasks/Task002/Task002.ps1
     Run-Prerequisites-Phase03:
         runs-on: windows-latest
         needs: [Run-Prerequisites-Phase01, Run-Prerequisites-Phase02]
         steps:
-        # - name: Checkout
-        #   uses: actions/checkout@v3
+        - name: Checkout
+          uses: actions/checkout@v3
         - name: Run Prerequisites-Phase03
           run: ./Tasks/Task003/Task003.ps1
     
